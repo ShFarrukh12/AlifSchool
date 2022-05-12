@@ -1,9 +1,8 @@
 package com.example.AlifSchool.pojo;
 
-import com.example.AlifSchool.entitiy.RoleUser;
 import lombok.Data;
 
-import java.util.Set;
+import java.util.List;
 
 @Data
 public class JwtResponse {
@@ -12,9 +11,9 @@ public class JwtResponse {
     private Long id;
     private String username;
     private String email;
-    private Set<RoleUser> rolles;
+    private List<String> rolles;
 
-    public JwtResponse(String token, Long id, String username, String email, Set<RoleUser> rolles) {
+    public JwtResponse(String token, Long id, String username, String email, List<String> rolles) {
         this.token = token;
         this.id = id;
         this.username = username;
