@@ -19,9 +19,24 @@ public class MainUser {
 
     @ManyToMany
     @Column(name = "TypeLessons", nullable = false)
-    @JoinTable(name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @JoinTable(name = "Typelesson",
+            joinColumns = @JoinColumn(name = "typelesson_id"),
+            inverseJoinColumns = @JoinColumn(name = "mainuser_id"))
     List<TypeLessons> typeLessonsList;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<TypeLessons> getTypeLessonsList() {
+        return typeLessonsList;
+    }
+
+    public void setTypeLessonsList(List<TypeLessons> typeLessonsList) {
+        this.typeLessonsList = typeLessonsList;
+    }
 }
