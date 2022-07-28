@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MathRepository extends MongoRepository<AlifSchoolMathEntity, Long> {
+public interface MathRepository extends JpaRepository<AlifSchoolMathEntity, Long> {
 
 }
